@@ -1,0 +1,97 @@
+                                                                                     HTML & CSS for Login page
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CAFENA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-cont {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 10px;
+            
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .login-cont h2 {
+            color: #ffa500;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .login-cont label {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .login-cont input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .login-cont button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ffa500;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .login-cont button:hover {
+            background-color: #ff8c00;
+        }
+
+        .login-cont p {
+            text-align: center;
+            margin-top: 20px;
+            color: #ddd;
+        }
+
+        .login-cont a {
+            color: #ffa500;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-cont">
+        <h2>Login to CAFENA</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </form>
+            <a href="Afterlogin.html"><button type="submit">Login</button></a>
+        
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+</body>
+</html>
+                                                                                     
