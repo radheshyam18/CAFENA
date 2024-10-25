@@ -1,0 +1,478 @@
+                                                                                       HTML & CSS for after login
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Website</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #fff;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.search-cart {
+    display: flex;
+    gap: 10px;
+}
+
+.search-cart input {
+    padding: 5px;
+}
+
+.search-cart button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    padding: 10px 0;
+    list-style-type: none;
+    min-width: 160px;
+    z-index: 1;
+    text-align: center;
+}
+
+.dropdown-content li a {
+    padding: 10px 20px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200px;
+    background: url('bg_1.jpg') no-repeat center center/cover;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-text button {
+    padding: 10px 20px;
+    background-color: #ffa500;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hero-image img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #222;
+}
+
+.about-text {
+    max-width: 50%;
+    color: #ddd;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.about-image img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.products {
+    padding: 50px;
+    background-color: #111;
+    text-align: center;
+}
+
+.products h2 {
+    color: #ffa500;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-item {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-item h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    color: #ddd;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-item button {
+    padding: 10px 20px;
+    background-color: #ffa500;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.reviews {
+    padding: 50px;
+    background-color: #222;
+    color: #ddd;
+    text-align: center;
+}
+
+.reviews h2 {
+    color: #ffa500;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.review-item {
+    margin-bottom: 20px;
+}
+
+.contact {
+    padding: 50px;
+    background-color: #111;
+    color: #fff;
+}
+
+.contact h2 {
+    color: #ffa500;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact label {
+    font-size: 16px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact textarea {
+    resize: none;
+    height: 100px;
+}
+
+.contact button {
+    padding: 10px;
+    background-color: #ffa500;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#check {
+    padding: 10px 20px;
+    background-color: #ffa500;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.social-media {
+    padding: 50px;
+    background-color: #222;
+    text-align: center;
+}
+
+.social-media h2 {
+    color: #ffa500;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 40px; 
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>CAFENA</h1>
+            </div>
+            <ul class="menu">
+                <li class="dropdown"><a href="#home">Home</a></li>
+                <li class="dropdown"><a href="#about">About</a></li>
+                <li class="dropdown">
+                    <a href="#product">Products </a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Organic Decaffeinated Coffee Beans</a></li>
+                        <li><a href="#">Organic Half-Caffeinated Coffee Beans</a></li>
+                        <li><a href="#">Roasted Coffee Beans</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#contact">Contact</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </li>
+                <li><a href="#Review">Review</a></li>
+                <li><a href="#">Blogs</a></li>
+            </ul>
+            <div class="search-cart">
+                <div class="search-cart">
+                    <input type="text" placeholder="Search">
+                <li class="dropdown"><a href="#"><button><b>Cart</b></button></a>
+                    <ul class="dropdown-content">
+                        <li><img src="pro1.jpg" alt="" height="50" width="50"></li>
+                        <li class="content">
+                            <b>coffee beans</b>
+                            <li class="price">19$</li>
+                        </li>
+                        <li><img src="pro2.jpg" alt="" height="50" width="50"></li>
+                        <li class="content">
+                            <b>coffee beans</b>
+                            <li class="price">49$</li>
+                        </li>
+                        <li><img src="pro3.png" alt="" height="50" width="50"></li>
+                        <li class="content">
+                            <b>coffee beans</b>
+                            <li class="price">35$</li>
+                        </li>
+                        <div id="check"><li><button>Checkout</button></li></div>
+                    </ul>
+                </li>
+            </div>
+            
+                
+                
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h2>Fresh Coffee in the Morning</h2>
+            <p>Start your day with a cup of our expertly roasted coffee, made to invigorate your senses.</p>
+            <a href="#product"><button>Get It Now</button></a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>At CAFENA, we believe that a great cup of coffee starts with the finest beans. Our passion for coffee runs deep, and we are committed to delivering the freshest, most flavorful coffee experiences to our customers. Whether you're a coffee connoisseur or just looking for a quality brew, CAFENA has something for everyone.</p>
+        </div>
+        <div class="about-image">
+            <img src="bg_2.jpg" alt="About Coffee Image">
+        </div>
+    </section>
+
+    <section class="products" id="product">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="pro2.jpg" alt="Coffee Beans">
+                <h3>Organic Decaffeinated Coffee Beans</h3>
+                <p>Rich and full-bodied flavor for the perfect brew.</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="product-item">
+                <img src="pro3.png" alt="Espresso Machine">
+                <h3>Organic Half-Caffeinated Coffee Beans</h3>
+                <p>Make the finest espresso at home.</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="product-item">
+                <img src="pro4.jpg" alt="Coffee Mug">
+                <h3>Organic Four Seasons Coffee Beans</h3>
+                <p>Perfect companion for your morning coffee.</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="product-item">
+                <img src="pro1.jpg" alt="Cold Brew Kit">
+                <h3>Roasted Coffee Beans</h3>
+                <p>Make smooth, refreshing cold brew at home.</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews" id="Review">
+        <h2>Customer Reviews</h2>
+        <div class="review-item">
+            <h3>Rohit kumar</h3>
+            <p>"The best coffee I've ever had! Smooth and rich flavor."</p>
+        </div>
+        <div class="review-item">
+            <h3>Anika Thakur</h3>
+            <p>"Absolutely love my new espresso machine. Highly recommend!"</p>
+        </div>
+        <div class="review-item">
+            <h3>Mike Tyson</h3>
+            <p>"Great selection of coffee beans. Will definitely buy again!"</p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section class="social-media">
+        <h2>Follow Us</h2>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" >
+                <img src="face.jpg" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com" >
+                <img src="instagram-new-logo-may-2016-846x846.jpg" alt="Instagram" />
+            </a>
+            <a href="https://www.twitter.com" >
+                <img src="twitter.jpeg" alt="Twitter" />
+            </a>
+            <a href="https://www.linkedin.com" >
+                <img src="link.png" alt="LinkedIn" />
+            </a>
+        </div>
+    </section>
+</body>
+</html>
+
+                                                                                       
